@@ -1,0 +1,44 @@
+{
+  "name": "capb2b",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-common-content": "^2.1.0",
+    "axios": "^1.7.7",
+    "express": "^4.19.2",
+    "unique-string": "^3.0.0"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/eslint-plugin-cds": "^3",
+    "cap-listening-plugin": "github:qmacro/cap-listening-plugin",
+    "dev-approuter": "^0.2.27",
+    "eslint": "^9",
+    "cds-plugin-ui5": "^0.2.1"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "[testing]": {
+          "kind": "sqlite",
+          "credentials": {
+            "url": "db.sqlite"
+          }
+        },
+        "[development]": {
+          "kind": "sqlite",
+          "credentials": {
+            "url": ":db.sqlite:"
+          }
+        }
+      }
+    }
+  }
+}

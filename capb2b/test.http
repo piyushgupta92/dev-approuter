@@ -1,0 +1,24 @@
+###
+# @name Basic
+GET http://localhost:4004/odata/v4/bookshop/Books
+
+# @name BooksQuery
+GET http://localhost:4004/odata/v4/bookshop/Books
+Content-Type: : application/json
+###
+# @name IncidentsCreate
+
+@customer_ID = {{ CustomersQuery.response.body.value[0].ID }}
+
+POST http://localhost:4004/odata/v4/bookshop/Books
+Content-Type: application/json
+
+{
+  "title": "New Book"
+}
+
+###
+@id = {{IncidentsCreate.response.body.$.ID}}
+
+POST http://localhost:4004/odata/v4/incidents/Incidents(ID={{id}},IsActiveEntity=false)/draftActivate
+Content-Type: application/json
