@@ -1,0 +1,19 @@
+{
+    "PORT": 5001,
+    "destinations": [
+        {
+            "Name": "capb2b",
+            "Authentication": "NoAuthentication",
+            "ProxyType": "Internet",
+            "Type": "HTTP",
+            "URL": "http://localhost:4004"
+        },
+        {
+            "Name": "test",
+            "Authentication": "NoAuthentication",
+            "ProxyType": "Internet",
+            "Type": "HTTP",
+            "URL": "http://localhost:3101"
+        }
+    ]
+}

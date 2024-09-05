@@ -1,0 +1,11 @@
+{
+    "name": "approuter",
+    "scripts": {
+        "dev": "CDS_ENV=testing node -e 'new require(`dev-approuter`)' _"
+    },
+    "devDependencies": {
+        "dev-approuter": "*",
+        "capb2b": "*",
+        "@sap/cds": "^7"
+    }
+}
